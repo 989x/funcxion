@@ -1,46 +1,3 @@
-// const getSpinFn = require('./getSpin')
-
-// 
-// RATE && CARD 
-// 
-
-let rateCard = ['Normal 😢', 'Rare 📦', 'SupeRrare 📦🌟']
-let itemCard_Normal = [' ']
-let itemCard_Rare = ['🍅', '🍇', '🍈', '🍉', '🍊']
-let itemCard_SuperRare = ['S🧚', 'SS🧚']
-
-let randomRate1 = Math.floor((Math.random() * 100) + 1);
-let randomRate2 = Math.floor((Math.random() * 100) + 1);
-let randomRate3 = Math.floor((Math.random() * 5) + 1);
-
-var randomCard_Rare = itemCard_Rare[Math.floor(Math.random()*itemCard_Rare.length)];
-var randomCard_SuperRare = itemCard_SuperRare[Math.floor(Math.random()*itemCard_SuperRare.length)];
-
-// 
-// FUNCTIONS
-// 
-
-function response(rate, item) {
-    res1 = rate
-    res2 = item
-    return {rate , item}
-}
-
-// 
-// INPUT 
-// 
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
-
-readline.question('spin ( 1 or 3 ) : ', spin => {
-    console.log(`get : ${spin} spin !`, '\n')
-    readline.close()
-    return getSpin(spin)
-})
-
 // 
 // SPIN
 // 
@@ -96,3 +53,6 @@ function getSpin(spin){
 
     }
 }
+
+module.exports = { getSpin }
+
